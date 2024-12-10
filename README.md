@@ -126,6 +126,8 @@ If you want to create obstacles for the AI, we can add a cube and scale the cube
 
 The video above is how the mesh will chnage to obstacles when adding them in and rebaking the mesh.
 
+You can also edit if you want to see the velocity, desireVelocity, and the path of the AI to be shown in the Inspector Window, which can be seen in the video above.
+
 https://github.com/user-attachments/assets/83fe753d-f881-4bed-a9dc-b50228bdd021
 
 The once you play the scene, final result of the AI should look like this.
