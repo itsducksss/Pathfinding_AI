@@ -100,4 +100,34 @@ This just means that the script will show the desired velocity (desired directio
 
 ![image](https://github.com/user-attachments/assets/665ad54e-486c-4cdf-af9a-094e7480483d)
 
-if you want to create obstacles for the AI, we can add a cube and scale the cube as desired and add the NavMeshObstacle onto it. We then leave it as a box type obstacle for the shape, which just means that the shape of the obstacle is box-like in shape which can affect the way the baked mesh for where the AI can and cannot go to.
+If you want to create obstacles for the AI, we can add a cube and scale the cube as desired and add the NavMeshObstacle onto it. We then leave it as a box type obstacle for the shape, which just means that the shape of the obstacle is box-like in shape which can affect the way the baked mesh for where the AI can and cannot go to. Once we add in all the wanted obstacles onto the scene we can then bake the mesh again.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The video above is how the mesh will chnage to obstacles when adding them in and rebaking the mesh.
+
+https://github.com/user-attachments/assets/83fe753d-f881-4bed-a9dc-b50228bdd021
+
+The once you play the scene, final result of the AI should look like this.
+
+
