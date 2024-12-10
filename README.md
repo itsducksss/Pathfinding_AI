@@ -25,7 +25,23 @@ This video shows how the AI character follows the player and the debugg shows ho
 
 # Getting Started
 
-For this tutorial you will need to have a 2 capsules in the scene. For this tutorial, the playable character is represented by a green capsule in the scene. In this scene, the white capsule will represent the AI in the scene. You will also need to download the Navigation AI package in Unity's registry.
+For this tutorial you will need to have a 2 capsules in the scene, both capsules should have a capsule collider onto them, and with one of the capsules to have a PlayerMovement or [Basic Character Movement](https://github.com/itsducksss/Basic-Character-Movement) script. For this tutorial, the playable character is represented by a green capsule in the scene. You should also have at a plane in the scene with a mesh collider which the player and the AI can walk on. In this scene, the white capsule will represent the AI in the scene. You will also need to download the Navigation AI package in Unity's registry.
+
+![image](https://github.com/user-attachments/assets/dfe1c099-ac93-4528-a606-525cb435ff01)
+
+We will first add the NavMeshAgent onto the capsule we want to follow the player. Which is white for this tutorial. We can then leave it as a humanoid type of AI for the NavMeshAgent.
+
+![image](https://github.com/user-attachments/assets/d4ec2b38-507a-442d-a5a3-d01acede531f)
+
+We will then open the Navigation menu which will bake the maps (create) on which the AI can and cannot go onto. We will mainly use the Navigation (Obsolete) window, however in older Unity versions prior to 2021 may not have this and may instead have these functions on the Navigation window which should have the same functionality.
+
+https://github.com/user-attachments/assets/e50e44e4-0ef4-487d-a0e7-f779212c86ec
+
+This video just shows the Navigation windows as well as how to bake a map in which the AI can walk onto. The video shows how the map adjusts to an obstacle when added into the scene, as well as what to do when the navigation window is closed and how to reopen the window. As seen in the video we open the Naviagtion (Obselete) window and slect the plane in which we want the AI to walk onto. we the bake the mesh usingthe Navigation (Obselete) window.
+
+![image](https://github.com/user-attachments/assets/233a1a12-af68-4cee-b805-fdf44aafc0e2)
+
+This mesh can be adjusted using the Naviagtion window as seen above by adjusting these values.
 
 ![image](https://github.com/user-attachments/assets/8a32a62c-3201-4cd1-8c03-0553125c88a6)
 
@@ -46,33 +62,34 @@ For this tutorial you will need to have a 2 capsules in the scene. For this tuto
 
 ![image](https://github.com/user-attachments/assets/ce8f6949-3e19-45ce-9046-b2a0032d1f75)
 
-- bool refers to
-- desiredVelocity
-- path
-- if
-- velocity in this script just refers to
-- Gizmos
-- Color
+- bool refers to a value that is either true or false.
+- velocity in this script just refers to how the AI is moving which adjusts to the desired velocity of the AI from where the AI currently is.
+- desiredVelocity in this script just refers to where the AI wants to go this just means that as the character moves that the line shown to represent the desired velocity will show where it wants to go (the target) almost immediatley as the player moves.
+- path this refers to route the AI is planning to take to get towards the traget which would be the player in this tutorial.
+- [if](https://imran-momin.medium.com/if-else-statements-unity-c-3ea7e8bc8eee)
+- 
+- [Gizmos](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Gizmos.html) this used to help provide visual debugging and setups within a scene when you play. This is not visible in the game view but is visible in the scene view of the unity project.
+- [Color](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Color.html) this just refers to a RGBA colors in Unity.
 - Color.green means that the color will be green.
-- Gizmos.color
+- Gizmos.color this just means that the Gizmos will be x color.
 - Gizmos.color = Color.green means that the line that will be shown that represents the velocity of the AI agent will be shown in the color green when youb play the scene.
-- DrawLine
-- transform.position
-- agent.velocity
+- [DrawLine](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Gizmos.DrawLine.html) this just means that a line will be drawn from the AI towards the target (desired velocity).
+- transform.position this just means that it uses the Tranform component and the values stated in there to determine the position of a certain GameOvject within a scene.
+- agent.velocity this just means that it uses the NavMeshAgent's comonent to create and show the velocity when debugging.
 - desiredVelocity means that the Gizmos shown will be where the Ai wants to go within the scene. In the instance of this tutorial the AI is made to follow the player character, which means that the desired path of the AI will be the playable character meaning that the line of the desiredVelocity should follow and adjust to where the player is.
 - Color.red means that the color will be red.
 - Color.black means that the color used will be black.
-- var
-- agentpath
-- var agentpath
-- agent.path
+- [var](https://docs.unity3d.com/2019.3/Documentation/Manual/bolt-variables.html) is just a shortened term for a variable.
+- agentpath this just means that agentpath is a areference to something.
+- var agentpath this means that the variable is called agentpath.
+- agent.path this means that the variable referenced as agentpath is using the NavMeshAgent component and the oath its taking.
 - [Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html) refers to the position using all 3 axis x, y, z which can be represented on a 3d space.
-- preCorner
-- foreach
-- corner
-- var corner
-- in
-- agentpath.corners
+- prevCorner this just means the previous corner Later in teh script prevCorner = corner just means that the prevCorner is the smae as the corner in the scene when drawing the Gizmos.
+- [foreach](https://www.reddit.com/r/csharp/comments/kwz815/can_someone_explain_foreach_loops/)
+- corner this is in reference to the corner in the baked mesh of where the AI can and cannot go to and show its path of the AI.
+- var corner this just means that each of the corners in the agents path.
+- in this just means that the corner is in the agentpath.
+- agentpath.corners this means that the script will use the corners that are in the agentpath component to function.
 - Gizmos.DrawLine(prevCorner, corner) just refers to where the corners of where the AI can go to it will connect the previous corner to the next corner on it's path (towards where it wants to go).
 - DrawSphere means that spheres will be drawn/shown on the scene in that area.
 - Gizmos.DrawSphere(corner, 0.1f), means that at the corners of the path of the AI, a sphere will be drawn in the scene to represent it.
@@ -80,3 +97,6 @@ For this tutorial you will need to have a 2 capsules in the scene. For this tuto
 
 This just means that the script will show the desired velocity (desired direction) of the AI shown by the line in the colour of red, the velocity (is where the AI is navigating and how it adjusts to the desiredVelocity as the target moves) of the AI represented by the line in the colour green, and the path of the AI which is shown using lines and spheres in the colour black in the scene. The path in the scene is shown using the spheres which represents the corners, and the lines which connect the corners and the previous corners, of where the AI can and cannot go in the scene, which eventually connect to the target in teh scene which in this tutorial is the player.
 
+![image](https://github.com/user-attachments/assets/665ad54e-486c-4cdf-af9a-094e7480483d)
+
+if you want to create obstacles for the AI, we can add a cube and scale the cube as desired and add the NavMeshObstacle onto it. We then leave it as a box type obstacle for the shape, which just means that the shape of the obstacle is box-like in shape which can affect the way the baked mesh for where the AI can and cannot go to.
