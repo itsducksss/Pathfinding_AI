@@ -43,6 +43,8 @@ This video just shows the Navigation windows as well as how to bake a map in whi
 
 This mesh can be adjusted using the Naviagtion window as seen above by adjusting these values.
 
+We then create a script called AiLocomotion, which will use the NavMesh we added onto the Ai capsule to move the capsule towards the playable character capsule (green) using the player's Transform values to  determine the position of the player within the scene. 
+
 ![image](https://github.com/user-attachments/assets/8a32a62c-3201-4cd1-8c03-0553125c88a6)
 
 - using just means that it will use that system e.g. if it said using UnityEngine, that just means that thescript has components that will utilise the Unity Engine system.
@@ -66,8 +68,7 @@ This mesh can be adjusted using the Naviagtion window as seen above by adjusting
 - velocity in this script just refers to how the AI is moving which adjusts to the desired velocity of the AI from where the AI currently is.
 - desiredVelocity in this script just refers to where the AI wants to go this just means that as the character moves that the line shown to represent the desired velocity will show where it wants to go (the target) almost immediatley as the player moves.
 - path this refers to route the AI is planning to take to get towards the traget which would be the player in this tutorial.
-- [if](https://imran-momin.medium.com/if-else-statements-unity-c-3ea7e8bc8eee)
-- 
+- [if()](https://imran-momin.medium.com/if-else-statements-unity-c-3ea7e8bc8eee) is an if statement which is used to help show if a block of code can be exectuted if specified conditions is true. in this case if the player_detection and input is true then the print "-"
 - [Gizmos](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Gizmos.html) this used to help provide visual debugging and setups within a scene when you play. This is not visible in the game view but is visible in the scene view of the unity project.
 - [Color](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Color.html) this just refers to a RGBA colors in Unity.
 - Color.green means that the color will be green.
