@@ -62,6 +62,8 @@ We then create a script called AiLocomotion, which will use the NavMesh we added
 - [OnDrawGizmos](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmos.html) refers to gizmos that are used in debugging in Unity and just means that it will draw these "Gizmos" to show visual aid in the Unity Scene when playing the scene.
 - agent.destination, just refers to what the NavMeshAhent is following, which is the player's transform/ position, which will be shown in the scene (not in the game) screen.
 
+This just means that the capsule will follow the Player's transform  using the NavMeshAgent component.
+
 ![image](https://github.com/user-attachments/assets/ce8f6949-3e19-45ce-9046-b2a0032d1f75)
 
 - bool refers to a value that is either true or false.
@@ -103,30 +105,17 @@ This just means that the script will show the desired velocity (desired directio
 If you want to create obstacles for the AI, we can add a cube and scale the cube as desired and add the NavMeshObstacle onto it. We then leave it as a box type obstacle for the shape, which just means that the shape of the obstacle is box-like in shape which can affect the way the baked mesh for where the AI can and cannot go to. Once we add in all the wanted obstacles onto the scene we can then bake the mesh again.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+https://github.com/user-attachments/assets/0ea1b716-880b-4fda-a888-039aab21fa28
 
 
 
 The video above is how the mesh will chnage to obstacles when adding them in and rebaking the mesh.
 
-You can also edit if you want to see the velocity, desireVelocity, and the path of the AI to be shown in the Inspector Window, which can be seen in the video above.
+
+https://github.com/user-attachments/assets/5338a57e-3eb2-47d2-a666-65284d3a8414
+
+
+You can also edit if you want to see the velocity, desiredVelocity, and the path of the AI to be shown in the Inspector Window, which can be seen in the video above.
 
 https://github.com/user-attachments/assets/83fe753d-f881-4bed-a9dc-b50228bdd021
 
